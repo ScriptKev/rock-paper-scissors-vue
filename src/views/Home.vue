@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <PxHeader />
+    <PxTable />
   </div>
 </template>
 
+<style lang="scss" scoped>
+@import '../assets/scss/main';
+
+.home {
+  height: 100%;
+  width: 100%;
+  padding: 20px 0;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: hsl(229, 25%, 31%);
+  background: radial-gradient(circle, hsl(214, 47%, 23%) 0%, hsl(237, 49%, 15%) 100%);
+}
+</style>
+
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PxHeader from '@/components/PxHeader'
+import PxTable from '@/components/PxTable'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  components: { PxHeader, PxTable }
 }
 </script>
